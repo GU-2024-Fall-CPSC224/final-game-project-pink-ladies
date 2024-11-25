@@ -310,6 +310,7 @@ public class CandyLand {
                     else if(turnCount==playerCounter){
                         turnCount=0;
                     }
+                    turnCount++;
                     }                    
                 }
             );
