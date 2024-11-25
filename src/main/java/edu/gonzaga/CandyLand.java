@@ -307,7 +307,7 @@ public class CandyLand {
                           panel4.setVisible(true);
                           //continueGame = false;
                     }
-                    else if(turnCount==playerCounter){
+                    else if(turnCount==numberOfPlayers){
                         turnCount=0;
                     }
                     turnCount++;
