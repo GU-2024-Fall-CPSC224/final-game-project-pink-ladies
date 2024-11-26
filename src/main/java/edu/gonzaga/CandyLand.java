@@ -310,7 +310,9 @@ public class CandyLand {
                     else if(turnCount==playerIcons.size()-1){
                         turnCount=0;
                     }
-                    turnCount++;
+                    else{
+                        turnCount++;
+                    }
                     }                    
                 }
             );
