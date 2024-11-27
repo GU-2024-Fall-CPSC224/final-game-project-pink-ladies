@@ -300,7 +300,7 @@ public class Board extends JPanel {
             {
                 if(hand.getSquare1().equals(spaces.get(i)))
                 {
-                    if(hand.getSquare2().equals(""))
+                    if(!hand.getSquare2().equals(""))
                     {
                         for(int j = i; j < spaces.size(); j++)
                         {
@@ -426,7 +426,7 @@ public class Board extends JPanel {
         spaces.add("blue");
         spaces.add("orange");
         spaces.add("green");
-        spaces.add("icecream");
+        spaces.add("iceCream");
         spaces.add("red");
         spaces.add("purple");
         spaces.add("yellow");
@@ -458,11 +458,11 @@ public class Board extends JPanel {
         spaces.add("orange");
         spaces.add("green");
         spaces.add("red");
-        spaces.add("any");
+        spaces.add("end");
     }
 
 
-//    JFrame frame = new JFrame("Candy Land Game Board");
+//    JFrame frame = newJFrame("Candy Land Game Board");
 //        frame.add(board);
 //
 //        frame.setSize(1000, 700);

@@ -303,6 +303,34 @@ public class CandyLand {
                           winner.setLocation(175, 200);
                           panel4.add(winner);
                           panel4.add(text);
+                                if(players.get(turnCount).getLabel() == 1)
+                                {
+                                    JLabel pink = new JLabel(pinkIcon);
+                                    pink.setBounds(250, 300, 200, 200);
+                                    panel4.add(pink);
+                                    pink.setVisible(true);
+                                }
+                                if(players.get(turnCount).getLabel() == 2)
+                                {
+                                    JLabel purple = new JLabel(purpleIcon);
+                                    purple.setBounds(250, 300, 200, 200);
+                                    panel4.add(purple);
+                                    purple.setVisible(true);
+                                }
+                                if(players.get(turnCount).getLabel() == 3)
+                                {
+                                    JLabel red = new JLabel(redIcon);
+                                    red.setBounds(250, 300, 200, 200);
+                                    panel4.add(red);
+                                    red.setVisible(true);
+                                }
+                                if(players.get(turnCount).getLabel() == 4)
+                                {   
+                                    JLabel yellow = new JLabel(yellowIcon);
+                                    yellow.setBounds(250, 300, 200, 200);
+                                    panel4.add(yellow);
+                                    yellow.setVisible(true);
+                                }
                           panel3.setVisible(false);
                           panel4.setVisible(true);
                           //continueGame = false;
