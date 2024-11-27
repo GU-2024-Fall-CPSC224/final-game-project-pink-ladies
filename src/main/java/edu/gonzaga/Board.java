@@ -22,7 +22,7 @@ public class Board extends JPanel {
         deck = new ArrayList<Card>();
         makeNewDeck(deck);
         spaces = new ArrayList<String>();
-        initiateSpaces();
+        initializeSpaces();
         candyPath = candyPath();
         players = new ArrayList<Player>();
         playerNames = new ArrayList<String>();
@@ -77,23 +77,6 @@ public class Board extends JPanel {
             
         }
         
-    }
-
-    public void initiateSpaces()
-    {
-        Random rand = new Random();
-        ArrayList <String> colors = new ArrayList<String>();
-        colors.add("blue");
-        colors.add("green");
-        colors.add("red");
-        colors.add("yellow");
-        colors.add("purple");
-        colors.add("orange");
-
-        for(int i = 0; i < 60; i++)
-        {
-            spaces.add(colors.get(rand.nextInt(colors.size())));
-        }
     }
 
     public void initializePotentialCards()
@@ -285,7 +268,7 @@ public class Board extends JPanel {
         int index = 0;
         if(hand.getIsSpecialCard())
         {
-            for(int i = 0; i < spaces.size(); i++)
+            for(int i = start; i < spaces.size(); i++)
             {
                 if(hand.getSquare1().equals(spaces.get(i)))
                 {
