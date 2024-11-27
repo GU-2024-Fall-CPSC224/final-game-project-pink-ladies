@@ -47,9 +47,21 @@ public class CandyLand {
         JPanel panel2 = new JPanel();
         JPanel panel3 = new JPanel();
         JPanel panel4 = new JPanel();
+        panel1.setSize(900, 900);
+        panel2.setSize(900, 900);
+        panel3.setSize(900, 900);
+        panel4.setSize(900, 900);
+        frame1.setSize(900, 900);
+        JLabel welcome = new JLabel("Welcome to Candy Land !   . . . ");
+        welcome.setBounds(100, 100, 200, 50);
         JLabel label1 = new JLabel("Choose number of players:");
         label1.setBounds(10, 10, 200, 50);
+        panel1.add(welcome);
         panel1.add(label1);
+        panel1.setBackground(Color.pink);
+        panel2.setBackground(Color.pink);
+        panel3.setBackground(Color.pink);
+        panel4.setBackground(Color.pink);
 
         JButton button1 = new JButton("2");
         button1.setBounds(100, 200, 50, 50);
@@ -63,11 +75,6 @@ public class CandyLand {
         panel1.add(button2);
         panel1.add(button3);
         panel1.add(button4);
-        panel1.setSize(1100, 650);
-        panel2.setSize(1100, 650);
-        panel3.setSize(1100, 650);
-        panel4.setSize(1100, 650);
-        frame1.setSize(1100, 750);
         frame1.setLayout(null);
         frame1.add(panel1);
         frame1.add(panel2);
@@ -78,24 +85,24 @@ public class CandyLand {
 
 
         // frame 2 **************************************
-        panel2.setSize(1100, 650);
+        panel2.setSize(900, 900);
         panel2.setLayout(null);
         panel2.setVisible(false);
         JLabel label2 = new JLabel("CHOOSE YOUR CHARACTER!");
-        label2.setBounds(350, 250, 400, 50);
+        label2.setBounds(250, 250, 400, 50);
         label2.setFont(new Font("Courier", Font.BOLD, 30));
         panel2.add(label2);
         JButton characterA = new JButton(pinkIcon);
-        characterA.setBounds(100, 50, 200, 200);
+        characterA.setBounds(5, 50, 200, 200);
         JButton characterB = new JButton(purpleIcon);
-        characterB.setBounds(100, 300, 200, 200);
+        characterB.setBounds(5, 300, 200, 200);
         JButton characterC = new JButton(yellowIcon);
-        characterC.setBounds(800, 50, 200, 200);
+        characterC.setBounds(680, 50, 200, 200);
         JButton characterD = new JButton(redIcon);
-        characterD.setBounds(800, 300, 200, 200);
+        characterD.setBounds(680, 300, 200, 200);
         JButton button5 = new JButton("Enter");
         JButton enterButton = new JButton("Enter");
-        enterButton.setBounds(500, 300, 100, 50);
+        enterButton.setBounds(400, 300, 100, 50);
         panel2.add(enterButton);
         enterButton.setVisible(true);
         button5.setBounds(650, 500, 100, 50);
@@ -115,7 +122,7 @@ public class CandyLand {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-        panel3.setSize(900, 800);//changes width from 900 to 1200!
+        panel3.setSize(900, 900);//changes width from 900 to 1200!
         JButton boardButton = new JButton(boardIcon);
         JButton drawButton = new JButton("Draw Card");
         JButton movePlayerButton = new JButton("Move");
