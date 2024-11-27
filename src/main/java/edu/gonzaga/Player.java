@@ -62,10 +62,17 @@ public class Player {
         System.out.println(board.spaces.get(space));
         String card1 = hand.getSquare1();
         String card2 = hand.getSquare2();
-        space = board.findNextSpace(card1, space);
-        if(!hand.square2.equals(""))
+        if(hand.specialCard)
         {
-            space = board.findNextSpace(card2, space);
+            space = board.findNextSpace(card1, 0);
+        }
+        else
+        {
+            space = board.findNextSpace(card1, space);
+            if(!hand.square2.equals(""))
+            {
+                space = board.findNextSpace(card2, space);
+            }
         }
         loc = board.candyPath.get(space);
         if(space==board.spaces.size()-1){
