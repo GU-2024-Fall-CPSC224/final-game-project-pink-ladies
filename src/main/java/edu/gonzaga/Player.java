@@ -60,7 +60,13 @@ public class Player {
     public void playerMoveSpaces(Board board){
         System.out.println(space);
         System.out.println(board.spaces.get(space));
-        space = board.findNextSpace(hand, space);
+        String card1 = hand.getSquare1();
+        String card2 = hand.getSquare2();
+        space = board.findNextSpace(card1, space);
+        if(!hand.square2.equals(""))
+        {
+            space = board.findNextSpace(card2, space);
+        }
         loc = board.candyPath.get(space);
         if(space==board.spaces.size()-1){
             winner = true;

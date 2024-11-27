@@ -263,37 +263,13 @@ public class Board extends JPanel {
         return deck.get(rand.nextInt(deck.size()));
     }
 
-    public int findNextSpace(Card hand, int start)
+    public int findNextSpace(String hand, int start)
     {
-        int index = 0;
-        if(hand.getIsSpecialCard())
-        {
-            for(int i = start; i < spaces.size(); i++)
+        int index = start;
+            for(int i = start + 1; i < spaces.size(); i++)
             {
-                if(hand.getSquare1().equals(spaces.get(i)))
+                if(hand.equals(spaces.get(i)))
                 {
-                    index = i;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            for(int i = start; i < spaces.size(); i++)
-            {
-                if(hand.getSquare1().equals(spaces.get(i)))
-                {
-                    if(!hand.getSquare2().equals(""))
-                    {
-                        for(int j = i; j < spaces.size(); j++)
-                        {
-                            if(hand.getSquare2().equals(spaces.get(j)))
-                            {
-                                index = j;
-                                break;
-                            }   
-                        }
-                    }
                     index = i;
                     break;
                 }
@@ -302,7 +278,6 @@ public class Board extends JPanel {
                     index = i;
                 }
             }
-        }
         return index;
     }
 
